@@ -3,4 +3,7 @@
     <string name="app_name">JustinMidterm</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="justin">Justin</string>
+    <string name="chipman">Chipman</string>
+    <string name="n01598472">N01598472</string>
 </resources>

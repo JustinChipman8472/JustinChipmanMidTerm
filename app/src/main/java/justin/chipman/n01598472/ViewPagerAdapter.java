@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import justin.chipman.n01598472.ChipmanFragment2;
-import justin.chipman.n01598472.JustinFragment1;
-import justin.chipman.n01598472.n01598472Fragment3;
-
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);

@@ -26,8 +26,46 @@ public class ChipmanActivity extends AppCompatActivity {
         adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
 
+        String[] tabTitles = new String[]{getString(R.string.justin), getString(R.string.chipman), getString(R.string.n01598472)};
+
         new TabLayoutMediator(tabLayout, viewPager,
-                (tab, position) -> tab.setText("Tab " + (position + 1))
+                (tab, position) -> tab.setText(tabTitles[position])
         ).attach();
+
+        // Set initial tab colors
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            if (tab != null) {
+                // Unselected tabs
+                tab.view.setBackgroundColor(getResources().getColor(R.color.unselected_tab));
+            }
+        }
+
+        // Listen for tab selection to change colors
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                // Selected tab
+                tab.view.setBackgroundColor(getResources().getColor(R.color.selected_tab));
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                // Unselected tab
+                tab.view.setBackgroundColor(getResources().getColor(R.color.unselected_tab));
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                // Optionally handle reselection
+            }
+        });
+
+        // Manually setting the first tab as selected to apply the correct color
+        TabLayout.Tab initialTab = tabLayout.getTabAt(0);
+        if (initialTab != null) {
+            initialTab.view.setBackgroundColor(getResources().getColor(R.color.selected_tab));
+        }
     }
 }
+
