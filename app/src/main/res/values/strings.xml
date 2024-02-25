@@ -14,6 +14,16 @@
     <string name="no_data">NO DATA</string>
     <string name="submit_rating">Submit Rating</string>
     <string name="rating">"Rating: "</string>
+    <string name="map">Map</string>
+    <string name="could_not_launch_maps">Could not launch maps</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="google_url">https://www.google.com/maps?q=</string>
+    <string name="geo">geo:</string>
+    <string name="got_location">"Got location: "</string>
+    <string name="location">Location</string>
+    <string name="could_not_resolve_map_intent">Could not resolve map intent</string>
+    <string name="google_local">com.google.android.apps.maps</string>
+    <string name="access_denied">Justin Chipman Access Denied</string>
 
     <string-array name="Justin">
         <item>email1@humber.com</item>

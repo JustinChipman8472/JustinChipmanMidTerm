@@ -70,7 +70,7 @@ public class JustinFragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_justin1, container, false);
 
         autoCompleteEmail = view.findViewById(R.id.autoCompleteEmail);
-        btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnSubmit = view.findViewById(R.id.JustinbtnSubmit);
 
         // Set up the AutoCompleteTextView
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),

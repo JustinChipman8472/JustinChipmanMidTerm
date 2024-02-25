@@ -28,7 +28,6 @@ public class n01598472Fragment3 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private int counter = 0;
 
     public n01598472Fragment3() {
         // Required empty public constructor
