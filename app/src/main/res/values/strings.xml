@@ -11,6 +11,8 @@
     <string name="submit">Submit</string>
     <string name="cannot_be_empty">Cannot be empty</string>
     <string name="invalid_email">Invalid email</string>
+    <string name="no_data">NO DATA</string>
+    <string name="submit_rating">Submit Rating</string>
 
     <string-array name="Justin">
         <item>email1@humber.com</item>
