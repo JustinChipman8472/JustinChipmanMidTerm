@@ -4,6 +4,7 @@ package justin.chipman.n01598472;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -94,6 +95,9 @@ public class JustinFragment1 extends Fragment {
         }
 
         // Pass email to other fragment
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        model.selectEmail(email);
+
         // Clear the user input
         autoCompleteEmail.setText("");
     }

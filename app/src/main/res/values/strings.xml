@@ -13,6 +13,7 @@
     <string name="invalid_email">Invalid email</string>
     <string name="no_data">NO DATA</string>
     <string name="submit_rating">Submit Rating</string>
+    <string name="rating">"Rating: "</string>
 
     <string-array name="Justin">
         <item>email1@humber.com</item>

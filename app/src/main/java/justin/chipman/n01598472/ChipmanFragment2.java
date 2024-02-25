@@ -4,10 +4,16 @@ package justin.chipman.n01598472;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +30,9 @@ public class ChipmanFragment2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextView tvEmail;
+    private RatingBar ratingBar;
+    private Button btnSubmitRating;
 
     public ChipmanFragment2() {
         // Required empty public constructor
@@ -59,7 +68,24 @@ public class ChipmanFragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chipman2, container, false);
+        View view = inflater.inflate(R.layout.fragment_chipman2, container, false);
+
+        tvEmail = view.findViewById(R.id.JustintvEmail);
+        ratingBar = view.findViewById(R.id.JustinratingBar);
+        btnSubmitRating = view.findViewById(R.id.JustinbtnSubmitRating);
+
+        // Retrieve and display email if exists
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        model.getSelectedEmail().observe(getViewLifecycleOwner(), email -> {
+            tvEmail.setText(email != null ? email : getString(R.string.no_data));
+        });
+
+        // When submit button clicked get rating and display on snackbar
+        btnSubmitRating.setOnClickListener(v -> {
+            float rating = ratingBar.getRating();
+            Snackbar.make(view, getString(R.string.rating) + rating, Snackbar.LENGTH_LONG).show();
+        });
+
+        return view;
     }
 }
