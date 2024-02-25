@@ -3,11 +3,15 @@ package justin.chipman.n01598472;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +28,7 @@ public class n01598472Fragment3 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int counter = 0;
 
     public n01598472Fragment3() {
         // Required empty public constructor
@@ -61,5 +66,25 @@ public class n01598472Fragment3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_n015984723, container, false);
+    }
+
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+
+        // Observe the LiveData for toast messages
+        model.getToastMessage().observe(getViewLifecycleOwner(), message -> {
+            if (getContext() != null && message != null) {
+                Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Instead of directly showing the toast, we update the LiveData in ViewModel
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        model.updateToastMessage();
     }
 }
