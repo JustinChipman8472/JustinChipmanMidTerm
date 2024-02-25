@@ -5,9 +5,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +28,9 @@ public class JustinFragment1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private AutoCompleteTextView autoCompleteEmail;
+    private Button btnSubmit;
 
     public JustinFragment1() {
         // Required empty public constructor
@@ -59,7 +66,35 @@ public class JustinFragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_justin1, container, false);
+        View view = inflater.inflate(R.layout.fragment_justin1, container, false);
+
+        autoCompleteEmail = view.findViewById(R.id.autoCompleteEmail);
+        btnSubmit = view.findViewById(R.id.btnSubmit);
+
+        // Set up the AutoCompleteTextView
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.Justin, android.R.layout.simple_dropdown_item_1line);
+        autoCompleteEmail.setAdapter(adapter);
+
+        // Button click listener
+        btnSubmit.setOnClickListener(v -> validateEmail(autoCompleteEmail.getText().toString()));
+
+        return view;
+    }
+
+    private void validateEmail(String email) {
+        if (email.isEmpty()) {
+            autoCompleteEmail.setError(getString(R.string.cannot_be_empty));
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            autoCompleteEmail.setError(getString(R.string.invalid_email));
+            return;
+        }
+
+        // Pass email to other fragment
+        // Clear the user input
+        autoCompleteEmail.setText("");
     }
 }

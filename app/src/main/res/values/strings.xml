@@ -6,4 +6,18 @@
     <string name="justin">Justin</string>
     <string name="chipman">Chipman</string>
     <string name="n01598472">N01598472</string>
+    <string name="justin_chipman">Justin Chipman</string>
+    <string name="enter_email">Enter email</string>
+    <string name="submit">Submit</string>
+    <string name="cannot_be_empty">Cannot be empty</string>
+    <string name="invalid_email">Invalid email</string>
+
+    <string-array name="Justin">
+        <item>email1@humber.com</item>
+        <item>email2@humber.com</item>
+        <item>email3@humber.com</item>
+        <item>email4@humber.com</item>
+        <item>email5@humber.com</item>
+        <item>email6@humber.com</item>
+    </string-array>
 </resources>
