@@ -28,6 +28,7 @@ public class n01598472Fragment3 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    SharedViewModel model;
 
     public n01598472Fragment3() {
         // Required empty public constructor
@@ -69,21 +70,19 @@ public class n01598472Fragment3 extends Fragment {
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
-        // Observe the LiveData for toast messages
-        model.getToastMessage().observe(getViewLifecycleOwner(), message -> {
-            if (getContext() != null && message != null) {
-                Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        // Instead of directly showing the toast, we update the LiveData in ViewModel
-        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        model.updateToastMessage();
+        showToast();
+    }
+
+    private void showToast() {
+        // Get the counter from ViewModel
+        String message = model.getCounter() + getString(R.string.justin_chipman);
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
 }

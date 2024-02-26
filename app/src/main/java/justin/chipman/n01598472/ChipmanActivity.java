@@ -137,6 +137,30 @@ public class ChipmanActivity extends AppCompatActivity {
                         Uri gmmIntentUri = Uri.parse(getString(R.string.geo) + location.getLatitude() + "," + location.getLongitude());
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage(getString(R.string.google_local));
+                        startActivity(mapIntent);
+                    } else {
+                        Log.d(getString(R.string.location), getString(R.string.location_not_available));
+                        Toast.makeText(ChipmanActivity.this, R.string.location_not_available, Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
+
+
+/*
+    private void getLastLocationAndOpenMap() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // Permission check for ACCESS_FINE_LOCATION
+            return;
+        }
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, location -> {
+                    Intent mapIntent = null;
+                    if (location != null) {
+                        Log.d(getString(R.string.location), getString(R.string.got_location) + location);
+                        Uri gmmIntentUri = Uri.parse(getString(R.string.geo) + location.getLatitude() + "," + location.getLongitude());
+                        mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage(getString(R.string.google_local));
                         if (mapIntent.resolveActivity(getPackageManager()) != null) {
                             startActivity(mapIntent);
                         }else if (mapIntent.resolveActivity(getPackageManager()) == null) {
@@ -148,13 +172,17 @@ public class ChipmanActivity extends AppCompatActivity {
                             Log.d(getString(R.string.location), getString(R.string.could_not_resolve_map_intent));
                             Toast.makeText(ChipmanActivity.this, R.string.could_not_launch_maps, Toast.LENGTH_LONG).show();
                         }
-                    } else {
+                    }else {
                         Log.d(getString(R.string.location), getString(R.string.location_not_available));
                         Toast.makeText(ChipmanActivity.this, R.string.location_not_available, Toast.LENGTH_LONG).show();
                     }
                 });
 
-    }
 
+    }
+    */
 }
+
+
+
 

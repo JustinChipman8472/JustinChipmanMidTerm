@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel;
 
 public class SharedViewModel extends ViewModel {
     private final MutableLiveData<String> selectedEmail = new MutableLiveData<>();
-    private final MutableLiveData<String> toastMessage = new MutableLiveData<>();
     private int counter = 0;
 
     public void selectEmail(String email) {
@@ -18,12 +17,10 @@ public class SharedViewModel extends ViewModel {
         return selectedEmail;
     }
 
-    public LiveData<String> getToastMessage() {
-        return toastMessage;
+    public String getCounter() {
+        counter++; // Increment counter each time the method is called
+        return counter + " ";
     }
 
-    public void updateToastMessage() {
-        counter++;
-        toastMessage.setValue(counter + " Justin Chipman");
-    }
+
 }
