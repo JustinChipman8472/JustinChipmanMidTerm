@@ -2,28 +2,28 @@
 <resources>
     <string name="app_name">JustinMidterm</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="justin">Justin</string>
-    <string name="chipman">Chipman</string>
-    <string name="n01598472">N01598472</string>
-    <string name="justin_chipman">Justin Chipman</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="justin" translatable="false">Justin</string>
+    <string name="chipman" translatable="false">Chipman</string>
+    <string name="n01598472" translatable="false">N01598472</string>
+    <string name="justin_chipman" translatable="false">Justin Chipman</string>
     <string name="enter_email">Enter email</string>
     <string name="submit">Submit</string>
     <string name="cannot_be_empty">Cannot be empty</string>
-    <string name="invalid_email">Invalid email</string>
-    <string name="no_data">NO DATA</string>
-    <string name="submit_rating">Submit Rating</string>
-    <string name="rating">"Rating: "</string>
-    <string name="map">Map</string>
-    <string name="could_not_launch_maps">Could not launch maps</string>
-    <string name="location_not_available">Location not available</string>
-    <string name="google_url">https://www.google.com/maps?q=</string>
-    <string name="geo">geo:</string>
-    <string name="got_location">"Got location: "</string>
-    <string name="location">Location</string>
-    <string name="could_not_resolve_map_intent">Could not resolve map intent</string>
-    <string name="google_local">com.google.android.apps.maps</string>
-    <string name="access_denied">Justin Chipman Access Denied</string>
+    <string name="invalid_email" translatable="false">Invalid email</string>
+    <string name="no_data" translatable="false">NO DATA</string>
+    <string name="submit_rating" translatable="false">Submit Rating</string>
+    <string name="rating" translatable="false">"Rating: "</string>
+    <string name="map" translatable="false">Map</string>
+    <string name="could_not_launch_maps" translatable="false">Could not launch maps</string>
+    <string name="location_not_available" translatable="false">Location not available</string>
+    <string name="google_url" translatable="false">https://www.google.com/maps?q=</string>
+    <string name="geo" translatable="false">geo:</string>
+    <string name="got_location" translatable="false">"Got location: "</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="could_not_resolve_map_intent" translatable="false">Could not resolve map intent</string>
+    <string name="google_local" translatable="false">com.google.android.apps.maps</string>
+    <string name="access_denied" translatable="false">Justin Chipman Access Denied</string>
 
     <string-array name="Justin">
         <item>email1@humber.com</item>

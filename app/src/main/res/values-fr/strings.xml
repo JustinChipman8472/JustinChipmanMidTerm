@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JustinMidterm</string>
+    <string name="enter_email">entrez l\'e-mail</string>
+    <string name="submit">soumettre</string>
+    <string name="cannot_be_empty">Ne peux pas être vide</string>
+</resources>
