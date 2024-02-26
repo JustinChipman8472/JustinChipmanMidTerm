@@ -5,3 +5,6 @@ This project is an Android application developed by Justin Chipman. It features 
 
 ## Repo
 [GitHub Repository](https://github.com/JustinChipman8472/JustinChipmanMidTerm)
+
+## Image
+![buggs bunny](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Bugs_Bunny.svg/1200px-Bugs_Bunny.svg.png)
