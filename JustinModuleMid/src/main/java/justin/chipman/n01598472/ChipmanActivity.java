@@ -125,6 +125,7 @@ public class ChipmanActivity extends AppCompatActivity {
         }
     }
 
+    // This version includes no check for package mapIntent package being null
     private void getLastLocationAndOpenMap() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // Permission check for ACCESS_FINE_LOCATION
@@ -146,7 +147,7 @@ public class ChipmanActivity extends AppCompatActivity {
     }
 
 
-
+// This version includes a fall back to access google maps via url in case mapIntent package is null
 /*
     private void getLastLocationAndOpenMap() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
