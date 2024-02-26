@@ -34,8 +34,8 @@ public class ChipmanActivity extends AppCompatActivity {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        TabLayout tabLayout = findViewById(R.id.Justintabs);
-        ViewPager2 viewPager = findViewById(R.id.Justinview_pager);
+        TabLayout tabLayout = findViewById(R.id.Justabs);
+        ViewPager2 viewPager = findViewById(R.id.Jusview_pager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);

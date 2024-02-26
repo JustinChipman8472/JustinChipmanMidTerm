@@ -70,9 +70,9 @@ public class ChipmanFragment2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chipman2, container, false);
 
-        tvEmail = view.findViewById(R.id.JustintvEmail);
-        ratingBar = view.findViewById(R.id.JustinratingBar);
-        btnSubmitRating = view.findViewById(R.id.JustinbtnSubmitRating);
+        tvEmail = view.findViewById(R.id.JustvEmail);
+        ratingBar = view.findViewById(R.id.JusratingBar);
+        btnSubmitRating = view.findViewById(R.id.JusbtnSubmitRating);
 
         // Retrieve and display email if exists
         SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);

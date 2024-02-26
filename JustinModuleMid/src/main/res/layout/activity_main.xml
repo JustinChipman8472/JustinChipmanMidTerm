@@ -6,14 +6,14 @@
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/Justintabs"
+        android:id="@+id/Justabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMode="fixed"
         app:tabGravity="fill" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/Justinview_pager"
+        android:id="@+id/Jusview_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

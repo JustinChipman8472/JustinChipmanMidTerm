@@ -9,7 +9,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:id="@+id/JustinimageView"
+        android:id="@+id/JusimageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ichigo"
@@ -17,12 +17,12 @@
         android:layout_marginTop="20dp"/>
 
     <TextClock
-        android:id="@+id/JustintextClock"
+        android:id="@+id/JustextClock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:format12Hour="hh:mm:ss a"
         android:format24Hour="HH:mm:ss"
-        android:layout_below="@id/JustinimageView"
+        android:layout_below="@id/JusimageView"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
